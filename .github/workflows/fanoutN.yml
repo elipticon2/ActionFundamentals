@@ -1,0 +1,22 @@
+name: FanOuts & FanIn
+on: workflow_dispatch
+jobs:
+  initial:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "First Job"
+  fanout1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Second Job"
+  fanout2:
+    runs-on: ubuntu-latest
+    needs: initial
+    steps:
+      - run: echo "Thrid Job"
+  fanin1:
+    runs-on: ubuntu-latest
+    needs: [fanout1, fanout2]
+    steps:
+      -  run: echo "Final Output"
+    
