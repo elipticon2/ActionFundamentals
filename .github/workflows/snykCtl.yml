@@ -1,0 +1,13 @@
+on: workflow_dispatch
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      -  name: secrets list
+         uses: actions/hello-world-javascript-action@v1
+         with:
+           super_secret:${{secrets.MY_REPO_SECRET}}
+      - name: sbow secret
+        run: |
+           echo: "${{secrets.MY_REPO_SECRETS}} is the secret."
+           
