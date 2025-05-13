@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest  
     strategy:
       matrix:
-        configuration: [debug, release]
+        configuration: [debug, release, scan]
+        env: [dev,test,uat,ppe,prod]
     steps:
-    - run: echo "This job builds the cofiguration ${{ matrix.configuration }}."
+    - run: echo "This job builds the cofiguration ${{ matrix.configuration}}."
