@@ -1,3 +1,4 @@
+name: Secret Exploit
 on: workflow_dispatch
 jobs:
   deployment:
