@@ -1,0 +1,14 @@
+name: Environment Variables
+on: workflow_dispatch
+env:
+  DAY_OF_WEEK: Monday
+jobs:
+  Greetings:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      -  name: Say Hello Its Monday
+         run: echo "${{Greeting}} ${{First_Name}}, Its ${{DAY_OF_WEEK}}"
+         env:
+           First_Name: Harish
