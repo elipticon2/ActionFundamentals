@@ -8,4 +8,4 @@ jobs:
         env: [dev,test,uat,ppe,prod]
         configuration: [debug, release, scan]
     steps:
-    - run: echo "This job builds the cofiguration ${{ matrix.configuration}}."
+    - run: echo "This job ${{matrix.configuration}}s the environments ${{ matrix.env}}."
