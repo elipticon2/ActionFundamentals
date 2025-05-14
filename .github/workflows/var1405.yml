@@ -1,4 +1,4 @@
-name: Environment Variables
+.name: Environment Variables
 on: workflow_dispatch
 env:
   DAY_OF_WEEK: Monday
@@ -9,4 +9,4 @@ jobs:
       Greeting: Hello
     steps:
       -  name: Say Hello Its Monday
-         run: echo "$Greeting $FIRST_NAME, Its $DAY_OF_WEEK"
+         run: echo "$Greeting $DEV.FIRST_NAME, Its $DAY_OF_WEEK"
