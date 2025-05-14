@@ -9,6 +9,4 @@ jobs:
       Greeting: Hello
     steps:
       -  name: Say Hello Its Monday
-         run: echo "$Greeting $First_Name, Its $DAY_OF_WEEK"
-         env:
-           First_Name: Harish
+         run: echo "$Greeting $FIRST_NAME, Its $DAY_OF_WEEK"
